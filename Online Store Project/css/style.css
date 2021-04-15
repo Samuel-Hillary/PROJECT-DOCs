@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+a :hover {
+  background: rgb(37, 9, 102);
+  color: white;
+}
+button:hover {
+  background: chocolate;
+}
+nav {
+  background: rgb(73, 17, 17);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 2rem;
+}
+menu {
+  display: none;
+}
+.fav {
+  text-align: center;
+  margin: 10px;
+  font-size: 25px;
+}
+.wall {
+  height: 100vh;
+  /* text-align: center; */
+  background: url("../images/vegitabless.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  position: relative;
+}
+.wall::before {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  background: rgb(5, 5, 5);
+  position: absolute;
+  mix-blend-mode: overlay;
+}
+
+.wall h1,
+p {
+  font-size: 2em;
+  margin-left: 4rem;
+  color: white;
+  font-family: sans-serif;
+}
+.wall a {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+.wall button {
+  background: none;
+  position: relative;
+  height: 2.4rem;
+  width: 15rem;
+  border-radius: 10px;
+  margin-left: 4rem;
+}
+button :hover {
+  background: rgb(24, 98, 121);
+}
+.showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  /* display: flex; */
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.card {
+  border: rgb(214, 209, 202) solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 10px 10px rgb(56, 134, 138);
+}
+.card p {
+  color: black;
+  font-size: 1.4rem;
+}
+.card img {
+  height: 200px;
+  max-width: 400px;
+  /*margin-right: 2em; */
+}
+.card button,
+.card a {
+  background: rgb(161, 40, 40);
+  color: white;
+  text-decoration: none;
+}
+.play-store {
+  background: burlywood;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-gap: 10rem;
+  margin-top: 5rem;
+}
+.loyota-app {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background: rgb(187, 121, 121); */
+  height: 110vh;
+}
+.note {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.6rem;
+  margin: 2rem 0;
+  /* background: rgb(204, 161, 109); */
+}
+.note h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.App {
+  display: flex;
+  flex-direction: row;
+  align-items: centter;
+  justify-content: center;
+  margin: 20px;
+}
+.App img {
+  width: 15rem;
+  margin: 3px;
+}
+.download {
+  max-width: 50%;
+  margin-left: 2rem;
+}
+.options {
+  background: black;
+  margin: 3rem 0;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.options p,
+a,
+hr {
+  font-size: 14px;
+  color: white;
+}
+.options a {
+  font-size: 14px;
+  color: wheat;
+  text-decoration: none;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 30%;
+}
+.news,
+.chef,
+.services {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  /* width: 30%; */
+}
+.floor {
+  display: flex;
+  flex-direction: column;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0.5rem;
+  max-width: 80vw;
+}
+.links ul {
+  /* position: absolute; */
+  /* display: block ; */
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.links a {
+  color:rgb(32, 32, 105);
+  margin: 12px;
+  font-size: 2rem;
+  position:relative;
+}
+.social-icon ::after{
+    content: "";
+    height: 10vh;
+    /* width: 5vw; */
+    background: grey;
+    position: absolute;
+    mix-blend-mode: overlay;
+}
+.links hr {
+  font-size: 14px;
+  color: black;
+}
+footer {
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 760px) {
+  body {
+  }
+  nav {
+    display: none;
+  }
+  menu {
+    position: relative;
+    width: 20%;
+    display: block;
+    height: 3rem;
+    text-align: center;
+    float: inline-end;
+    background: #491111;
+    visibility: visible;
+    margin: 3rem 0;
+  }
+  menu a {
+    text-decoration: none;
+  }
+  .wall {
+    height: 30rem;
+
+    /* position: absolute; */
+    /* justify-content: center;
+    font-size: 1em;*/
+    width: 100%;
+    background: url("../images/dish.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .card {
+    width: 400px;
+  }
+  .play-store {
+    background: burlywood;
+    display: flex;
+    flex-direction: column;
+  }
+  .App {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .download img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 1rem;
+  }
+  /* grid-template-columns: 1fr 1fr; */
+  .options {
+    /* display: ; */
+    flex-direction: column;
+  }
+  .about {
+    text-align: start;
+    width: 100%;
+  }
+}
